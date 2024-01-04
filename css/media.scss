@@ -1,0 +1,30 @@
+@media (max-width: 1600px) {
+    .recent-block {
+        height: 64px !important;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1140px) {
+    .recent-block {
+        height: 48px !important;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .recent-container {
+        grid-template-columns: 0.5fr 0.5fr !important;
+        grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        max-width: 60px;
+    }
+
+    .main {
+        margin-left: 60px;
+    }
+}
