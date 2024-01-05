@@ -1,17 +1,3 @@
-* {
-  font-family: "Inter", sans-serif;
-}
-
-body {
-  background-color: #000;
-  color: white;
-}
-
-a {
-  text-decoration: none;
-  color: #B3B3B3;
-}
-
 .sidebar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -81,12 +67,4 @@ a {
 }
 .main .other-container .other-block .other-text {
   margin: 0;
-}
-
-.active {
-  color: #fff !important;
-}
-
-.pointer {
-  cursor: pointer;
 }

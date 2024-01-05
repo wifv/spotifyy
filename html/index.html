@@ -7,7 +7,10 @@
 
     <link rel="stylesheet" href="../css/media.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/global.css">
     <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
 </head>
 <body>
     <aside class="sidebar" id="sidebar">
@@ -64,9 +67,12 @@
             <p id="music-name">bomba</p>
         </div>
         <div id="music-line">
-            <span><</span>
-            <img src="../images/home.svg" alt="" width="50">
-            <span>></span>
+            <div class="some-block">
+                <span><</span>
+                <img src="../images/home.svg" alt="" width="50">
+                <span>></span>
+                <audio src="../music/guitar.mp3" id="music-track"></audio>
+            </div>
             <input type="range" name="slider" id="slider">
         </div>
     </section>
