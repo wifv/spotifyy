@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+</head>
+<body>
+    <aside class="sidebar" id="sidebar">
+        <div class="upper-side sidebar-block">
+            <a href="#" class="upper-side-block pointer active" id="home">
+                <img src="./images/home.svg" alt="home" class="icon">
+                <p>Home</p>
+            </a>
+            <a href="./html/search.html" class="upper-side-block pointer" id="search">
+                <img src="./images/search.svg" alt="home" class="icon">
+                <p>Search</p>
+            </a>
+        </div>
+        <div class="lower-side sidebar-block">
+
+        </div>
+    </aside>
+
+    <main class="main" id="main">
+        <div class="recent-container">
+            <div class="recent-block pointer">
+                <img src="./images/error.svg" alt="" class="recent-image">
+                <p>music name</p>
+            </div>
+            <div class="recent-block pointer">
+                <img src="./images/error.svg" alt="" class="recent-image">
+                <p>music name</p>
+            </div>
+            <div class="recent-block pointer">
+                <img src="./images/error.svg" alt="" class="recent-image">
+                <p>music name</p>
+            </div>
+            <div class="recent-block pointer">
+                <img src="./images/error.svg" alt="" class="recent-image">
+                <p>music name</p>
+            </div>
+            <div class="recent-block pointer">
+                <img src="./images/error.svg" alt="" class="recent-image">
+                <p>music name</p>
+            </div>
+            <div class="recent-block pointer">
+                <img src="./images/error.svg" alt="" class="recent-image">
+                <p>music name</p>
+            </div>
+        </div>
+
+        <div class="block-container" id="block-container">
+            <div class="music-block pointer">
+                    <img src="../images/error.svg" alt="" class="music-image">
+                    <p>guitar</p>
+                    <img class="play" id="lol-image" src="./images/play.svg"></img>
+                    <audio class="hidden" src="./music/guitar.wav" id="lol"></audio>
+                </div>
+        </div>
+    </main>
+    
+    <section class="player" id="player">
+        <div id="music-info">
+            <img src="./images/error.svg" alt="no image" id="music-image">
+            <p id="music-name">bomba</p>
+        </div>
+        <div id="music-line">
+            <div class="some-block">
+                <span><</span>
+                <img src="./images/home.svg" alt="" width="50">
+                <span>></span>
+                <audio src="./music/guitar.wav" id="music-track"></audio>
+            </div>
+            <div>
+                <span id="cTime">00:00</span>
+                <input type="range" name="slider" id="slider">
+                <span id="duration-wrapper">00:00</span>
+            </div>
+        </div>
+        <div class="volume">
+            <img src="./images/repeat.svg" alt="" width="50">
+            <input type="range" name="volume" id="volume">
+        </div>
+    </section>
+    
+    <script src="./js/script.js"></script>
+    <script src="./js/active.js"></script>
+</body>
+</html>
