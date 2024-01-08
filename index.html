@@ -58,12 +58,6 @@
         </div>
 
         <div class="block-container" id="block-container">
-            <div class="music-block pointer">
-                    <img src="../images/error.svg" alt="" class="music-image">
-                    <p>guitar</p>
-                    <img class="play" id="lol-image" src="./images/play.svg"></img>
-                    <audio class="hidden" src="./music/guitar.wav" id="lol"></audio>
-                </div>
         </div>
     </main>
     
@@ -74,20 +68,20 @@
         </div>
         <div id="music-line">
             <div class="some-block">
-                <span><</span>
-                <img src="./images/home.svg" alt="" width="50">
-                <span>></span>
+                <img src="./images/direction.svg" alt="" class="direction">
+                <img src="./images/play.svg" alt="" width="50" id="play">
+                <img src="./images/direction.svg" alt="" class="direction rotateD">
                 <audio src="./music/guitar.wav" id="music-track"></audio>
             </div>
             <div>
-                <span id="cTime">00:00</span>
-                <input type="range" name="slider" id="slider">
-                <span id="duration-wrapper">00:00</span>
+                <span id="cTime">00:00:00</span>
+                <input type="range" name="slider" id="slider" value="0">
+                <span id="duration-wrapper">00:00:00</span>
             </div>
         </div>
         <div class="volume">
             <img src="./images/repeat.svg" alt="" width="50">
-            <input type="range" name="volume" id="volume">
+            <input type="range" name="volume" id="volume" value="100">
         </div>
     </section>
     
