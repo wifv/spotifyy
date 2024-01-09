@@ -16,6 +16,10 @@ const musicName = document.getElementById("music-name");
 const musicImage = document.getElementById("music-image");
 const play = document.getElementById("play");
 const cTime = document.getElementById("cTime");
+const sidebar = document.getElementsByClassName('upper-side-block');
+const search = document.getElementById('search');
+const searchSystem = document.getElementById('search-system');
+const home = document.getElementById('home');
 let duration;
 
 volume.volume = 1;
@@ -119,3 +123,42 @@ function time(seconds) {
         return rTime.substring(3)
     }
 }
+
+search.addEventListener('click', () => {
+    if(searchSystem.classList.contains('open-slide')) {
+        searchSystem.classList.remove('open-slide');
+        sidebar[1].firstElementChild.classList.remove('active');
+        sidebar[1].firstElementChild.firstElementChild.classList.remove('active')
+    } else {
+        searchSystem.style.display = "block";
+        setTimeout(() => {
+            searchSystem.classList.add('open-slide');
+            sidebar[1].firstElementChild.classList.add('active')
+            sidebar[1].firstElementChild.firstElementChild.classList.add('active')
+        }, 100);
+    }
+})
+
+home.addEventListener('click', () => {
+    searchSystem.classList.remove('open-slide');
+    sidebar[1].firstElementChild.classList.remove('active');
+    sidebar[1].firstElementChild.firstElementChild.classList.remove('active')
+})
+
+const form = document.getElementById('form');
+
+form.addEventListener('submit', async event => {
+    event.preventDefault();
+
+    const data = new FormData(form);
+
+
+    fetch("https://test.imowww.uz/api/music/track/", {
+        method: 'POST',
+        body: data
+    }).then(response => {
+        if (response.ok) {
+            console.log('nigga')
+        }
+    })
+});

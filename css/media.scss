@@ -31,6 +31,11 @@
 @media (max-width: 767px) {
     .sidebar {
         max-width: 60px !important;
+
+        .upper-side-block p {
+            display: none;
+            margin: auto;
+        }
     }
 
     .player {

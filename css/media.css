@@ -62,6 +62,10 @@
   .sidebar {
     max-width: 60px !important;
   }
+  .sidebar .upper-side-block p {
+    display: none;
+    margin: auto;
+  }
   .player {
     height: 100px !important;
   }

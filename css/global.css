@@ -1,18 +1,22 @@
+* {
+  -webkit-transition: all 0.4s, display 0s;
+  transition: all 0.4s, display 0s;
+  font-family: "Inter", sans-serif;
+}
+
 .hidden {
   visibility: hidden;
   position: absolute;
 }
 
 .active {
-  color: #fff !important;
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
 }
 
 .pointer {
   cursor: pointer;
-}
-
-* {
-  font-family: "Inter", sans-serif;
 }
 
 body {

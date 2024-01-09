@@ -13,19 +13,24 @@
     <link rel="icon" type="image/x-icon" href="./images/favicon.png">
 </head>
 <body>
+    <div id="search-system">
+        <input type="text" placeholder="search">
+    </div>
     <aside class="sidebar" id="sidebar">
         <div class="upper-side sidebar-block">
-            <a href="#" class="upper-side-block pointer active" id="home">
-                <img src="./images/home.svg" alt="home" class="icon">
+            <a href="#" class="upper-side-block pointer" id="home">
+                <svg fill="#727272" viewBox="-20 -20 614.40 614.40" xmlns="http://www.w3.org/2000/svg" alt="home" class="icon active" id="home-icon"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="8.192"></g><g id="SVGRepo_iconCarrier"><polygon fill-rule="evenodd" points="192 0 0 153.6 0 384 149.333 384 149.333 256 234.667 256 234.667 384 384 384 384 153.6" transform="translate(64 64)"></polygon></g></svg>
                 <p>Home</p>
             </a>
-            <a href="./html/search.html" class="upper-side-block pointer" id="search">
-                <img src="./images/search.svg" alt="home" class="icon">
+            <div href="#" class="upper-side-block pointer" id="search">
+                <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" alt="home" class="icon">
+                    <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#727272" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="search-icon"/>
+                </svg>
                 <p>Search</p>
-            </a>
+            </div>
         </div>
         <div class="lower-side sidebar-block">
-
+            
         </div>
     </aside>
 
@@ -59,9 +64,17 @@
 
         <div class="block-container" id="block-container">
         </div>
+
+        <form id="form">
+            <input type="text" id="name" name="name" />
+            <input type="text" id="author_name" name="author_name"/>
+            <input type="file" id="image" name="image"/>
+            <input type="file" id="music" name="music_file"/>
+            <button type="submit" id="submit-btn">Log in</button>
+        </form>
     </main>
     
-    <section class="player" id="player">
+    <footer class="player" id="player">
         <div id="music-info">
             <img src="./images/error.svg" alt="no image" id="music-image">
             <p id="music-name">asdf</p>
@@ -83,7 +96,7 @@
             <img src="./images/repeat.svg" alt="" class="volume-icon">
             <input type="range" name="volume" id="volume" value="100">
         </div>
-    </section>
+    </footer>
     
     <script src="./js/script.js"></script>
     <script src="./js/active.js"></script>
