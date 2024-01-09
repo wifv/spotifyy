@@ -43,6 +43,7 @@
 
 .main {
     margin-left: 350px;
+    margin-bottom: 125px;
     position: relative;
     padding: 21px;
     
@@ -75,6 +76,7 @@
         .music-block {
             padding: 10px;
             position: relative;
+            word-wrap: break-word;
 
             .music-image {
                 width: 100%;
@@ -86,12 +88,17 @@
 
 #music-info {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     gap: 20px;
     margin-left: 10px;
 
     img {
-        height: 100%;
+        height: 72px;
+    }
+
+    p {
+        margin: 0;
+        max-width: 400px;
     }
 }
 
@@ -107,11 +114,13 @@
     justify-content: space-between;
     background-color: black;
 
+
     #music-line {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+        
 
         .some-block {
             display: flex;
@@ -134,15 +143,13 @@
 }
 
 #slider {
-  appearance: none;
-  max-width: 1000px;
-  min-width: 400px;
-  width: 50%;
-  margin: 0;
-  padding: 0;
-  height: 5px;
-  outline: none;
-  background-color: #6f6f6f;
+    appearance: none;
+    width: 600px;
+    margin: 0;
+    padding: 0;
+    height: 5px;
+    outline: none;
+    background-color: #6f6f6f;
 }
 
 
@@ -166,8 +173,15 @@
 
 .volume {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    height: 20px;
+    gap: 10px;
     margin-right: 10px;
+    align-self: flex-end;
+
+    .volume-icon {
+        max-width: 20px;
+    }
 }
 
 #volume {
@@ -184,6 +198,12 @@
     position: absolute;
     right: 15%;
     width: 25%;
-    bottom: 30%;
+    top: 40%;
 }
 
+.height-limit {
+    height: 19px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}

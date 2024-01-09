@@ -5,10 +5,19 @@
     }
 }
 
+@media (max-width: 1366px) {
+    #slider {
+        width: 500px !important;
+    }
+}
+
 @media (max-width: 1140px) {
     .recent-block {
         height: 48px !important;
         font-size: 0.875rem;
+    }
+    #slider {
+        width: 300px !important;
     }
 }
 
@@ -21,10 +30,68 @@
 
 @media (max-width: 767px) {
     .sidebar {
-        max-width: 60px;
+        max-width: 60px !important;
     }
 
+    .player {
+        height: 100px !important;
+
+        #music-info {
+            // width: 0px !important;
+            // overflow: hidden;
+            flex-direction: column;
+            gap: 5px;
+            align-items: unset;
+        }
+
+        #music-line {
+            justify-content: flex-end !important;
+            gap: 20px !important;
+        }
+
+        .volume {
+            img {
+                position: relative;
+                margin-right: 20px !important;
+            }
+
+            flex-direction: column;
+            width: 40px;
+
+            img {
+                margin-right: 5px;
+            }
+
+            #volume::-webkit-slider-thumb {
+                min-height: 15px !important;
+                min-width: 10px !important;
+            }
+
+            #volume {
+                rotate: 270deg;
+                position: relative;
+                left: 15px;
+                bottom: 65px;
+                min-height: 15px !important;
+                margin: 0;
+            }
+        }
+
+    }
+    
     .main {
-        margin-left: 60px;
+        margin-left: 60px !important;
+    }
+}
+
+@media (max-width: 560px) {
+    #slider {
+        width: 250px !important;
+    }
+}
+
+@media (max-width: 460px) {
+    #slider {
+        width: 150px !important;
     }
 }

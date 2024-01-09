@@ -49,8 +49,8 @@ fetch('https://test.imowww.uz/api/music/track/', {
                 }
                 setTimeout(() => {
                     slider.max = Math.round(musicTrack.duration);
-                    durationElement.innerText = Math.round(musicTrack.duration);
-                }, 100);
+                    durationElement.innerText = time(Math.round(musicTrack.duration));
+                }, 1000);
                 musicImage.src = blocks[i].children[0].src;
                 console.log(musicImage.src)
                 musicName.innerText = blocks[i].children[1].innerText;
@@ -68,23 +68,39 @@ volume.addEventListener('change', () => {
 
 slider.addEventListener('change', () => {
     musicTrack.currentTime = slider.value;
-    cTime.innerText = slider.value;
+    cTime.innerText = time(slider.value);
 })
 
 musicTrack.addEventListener("timeupdate", () => {
     slider.value = musicTrack.currentTime;
-    cTime.innerText = slider.value;
+    cTime.innerText = time(slider.value);
 })
 
+let vv = 100;
+
 document.body.addEventListener('keyup', key => {
-    if(key.key == " ") {
+    if (key.key == " ") {
         playPause(musicTrack)
-        durationElement.innerText = Math.round(musicTrack.duration);
+        durationElement.innerText = time(Math.round(musicTrack.duration));
+    }
+    if (key.key == "ArrowUp") {
+        if (vv < 100) {
+            vv += 5;
+            volume.value = vv;
+            musicTrack.volume = vv / 100;
+        }
+    }
+    if (key.key == "ArrowDown") {
+        if (vv > 0) {
+            vv -= 5;
+            volume.value = vv;
+            musicTrack.volume = vv / 100;
+        }
     }
 })
 
 function playPause(musicTrack) {
-    if(musicTrack.paused == true) {
+    if (musicTrack.paused == true) {
         musicTrack.play();
         musicTrack.paused = true;
     } else if (musicTrack.paused == false) {
@@ -95,3 +111,11 @@ function playPause(musicTrack) {
 play.addEventListener('click', () => {
     playPause(musicTrack);
 })
+
+function time(seconds) {
+    let rTime = new Date(seconds * 1000).toISOString().substr(11, 8);
+
+    if(rTime.substring(0, 2) == '00') {
+        return rTime.substring(3)
+    }
+}
