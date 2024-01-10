@@ -1,0 +1,111 @@
+#submit-btn,
+.file-label {
+    border: 3px solid rgb(0, 0, 0);
+    padding: 15px 0;
+    width: 100%;
+    appearance: none;
+    background-color: transparent;
+    text-align: center;
+    border-top: 0;
+}
+
+.d-n {
+    display: none;
+}
+
+#submit-btn {
+    border: 0;
+}
+
+.input-text::placeholder {
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+.input-text {
+    appearance: none;
+    text-decoration: none;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    border: 3px solid rgb(0, 0, 0);
+    border-bottom: 0;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    width: 100%;
+    text-align: start;
+
+    padding: 20px;
+    background-color: #e4e4e4;
+    color: black;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 350px;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+
+    .sidebar-block {
+        background-color: #121212;
+        color: white;
+        border-radius: 8px;
+        padding: 8px 12px;
+    }
+
+    .upper-side {
+        display: flex;
+        flex-direction: column;
+        color: #B3B3B3;
+        font-weight: 600;
+        
+        .upper-side-block {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+    
+            .icon {
+                max-width: 40px !important;
+                width: 40px !important;
+                max-height: 40px !important;
+                height: 40px !important;
+            }
+        }
+    
+        #search svg {
+            max-width: 35px;
+            margin-left: 2px;
+            margin-right: 3px;
+        }
+    }
+
+    .lower-side {
+        height: 100vh;
+    }
+}
+
+.main {
+    margin-left: 350px;
+    margin-bottom: 125px;
+    position: relative;
+    padding: 21px;
+}

@@ -20,9 +20,11 @@ const sidebar = document.getElementsByClassName('upper-side-block');
 const search = document.getElementById('search');
 const searchSystem = document.getElementById('search-system');
 const home = document.getElementById('home');
-let duration;
+const loop = document.getElementById("loop");
 
 volume.volume = 1;
+let count = 0;
+
 
 fetch('https://test.imowww.uz/api/music/track/', {
     method: "GET"
@@ -59,6 +61,36 @@ fetch('https://test.imowww.uz/api/music/track/', {
                 console.log(musicImage.src)
                 musicName.innerText = blocks[i].children[1].innerText;
                 playPause(musicTrack);
+
+                musicTrack.addEventListener('ended', () => {
+                    count++;
+                    if (count + i < blocks.length) {
+                        if(musicTrack.src != blocks[i+count].children[3].src) {
+                            musicTrack.src = blocks[i+count].children[3].src;
+                        }
+                        setTimeout(() => {
+                            slider.max = Math.round(musicTrack.duration);
+                            durationElement.innerText = time(Math.round(musicTrack.duration));
+                        }, 1000);
+                        musicImage.src = blocks[i+count].children[0].src;
+                        console.log(musicImage.src)
+                        musicName.innerText = blocks[i+count].children[1].innerText;
+                        playPause(musicTrack);
+                    } else {
+                        if(musicTrack.src != blocks[0].children[3].src) {
+                            musicTrack.src = blocks[0].children[3].src;
+                        }
+                        setTimeout(() => {
+                            slider.max = Math.round(musicTrack.duration);
+                            durationElement.innerText = time(Math.round(musicTrack.duration));
+                        }, 1000);
+                        musicImage.src = blocks[0].children[0].src;
+                        console.log(musicImage.src)
+                        musicName.innerText = blocks[0].children[1].innerText;
+                        playPause(musicTrack);
+                        count = 0
+                    }
+                })
             })
         }
     }
@@ -145,20 +177,18 @@ home.addEventListener('click', () => {
     sidebar[1].firstElementChild.firstElementChild.classList.remove('active')
 })
 
-const form = document.getElementById('form');
-
-form.addEventListener('submit', async event => {
-    event.preventDefault();
-
-    const data = new FormData(form);
-
-
-    fetch("https://test.imowww.uz/api/music/track/", {
-        method: 'POST',
-        body: data
-    }).then(response => {
-        if (response.ok) {
-            console.log('nigga')
-        }
-    })
+document.addEventListener('keydown', function(event) {
+    if (event.key == " ") {
+        event.preventDefault();
+    }
 });
+
+loop.addEventListener('click', () => {
+    if (loop.firstElementChild.classList.contains('active-green')) {
+        loop.firstElementChild.classList.remove('active-green');
+        musicTrack.loop = false;
+    } else {
+        loop.firstElementChild.classList.add('active-green');
+        musicTrack.loop = true;
+    }
+})

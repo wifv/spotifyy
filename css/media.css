@@ -67,7 +67,7 @@
     margin: auto;
   }
   .player {
-    height: 100px !important;
+    height: 120px !important;
   }
   .player #music-info {
     -webkit-box-orient: vertical;
