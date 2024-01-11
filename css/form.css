@@ -109,7 +109,7 @@ form form > div {
           flex-direction: column;
   gap: 4px;
   max-width: 350px;
-  width: 100%;
+  width: 90%;
   position: fixed;
   overflow: hidden;
 }
