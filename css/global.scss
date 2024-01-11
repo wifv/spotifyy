@@ -32,3 +32,20 @@ a {
     color: #00ff00 !important;
     stroke: #00ff00 !important;
 }
+
+p {
+    width: fit-content;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.doFlex {
+    display: flex;
+    gap: 15px;
+}
+
+#search svg {
+    margin: 0 !important;
+}

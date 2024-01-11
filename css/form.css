@@ -20,33 +20,37 @@
 }
 
 .input-text::-webkit-input-placeholder {
-  color: black;
+  color: white;
   font-family: "Inter", sans-serif;
   font-size: 16px;
 }
 
 .input-text::-moz-placeholder {
-  color: black;
+  color: white;
   font-family: "Inter", sans-serif;
   font-size: 16px;
 }
 
 .input-text:-ms-input-placeholder {
-  color: black;
+  color: white;
   font-family: "Inter", sans-serif;
   font-size: 16px;
 }
 
 .input-text::-ms-input-placeholder {
-  color: black;
+  color: white;
   font-family: "Inter", sans-serif;
   font-size: 16px;
 }
 
 .input-text::placeholder {
-  color: black;
+  color: white;
   font-family: "Inter", sans-serif;
   font-size: 16px;
+}
+
+.form-input {
+  color: white;
 }
 
 .input-text {
@@ -77,9 +81,12 @@ form {
   max-width: 400px;
   width: 100%;
   text-align: start;
+  border: 3px solid white;
   padding: 20px;
-  background-color: #e4e4e4;
-  color: black;
+}
+form form > div {
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
 }
 
 .flex {
@@ -152,4 +159,19 @@ form {
   margin-bottom: 125px;
   position: relative;
   padding: 21px;
+}
+
+.sidebar-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+.sidebar-block p {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
