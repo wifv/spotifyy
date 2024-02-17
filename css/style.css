@@ -7,7 +7,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 4px;
-  max-width: 350px;
+  max-width: 250px;
   width: 100%;
   position: fixed;
   overflow: hidden;
@@ -88,7 +88,7 @@
 }
 
 .main {
-  margin-left: 350px;
+  margin-left: 250px;
   margin-bottom: 125px;
   position: relative;
   padding: 21px;
@@ -161,9 +161,11 @@
   gap: 20px;
 }
 .main .block-container .music-block {
-  padding: 10px;
+  padding: 30px;
   position: relative;
   word-wrap: break-word;
+  background-color: #3b5236;
+  border-radius: 8px;
 }
 .main .block-container .music-block .music-image {
   width: 100%;
@@ -317,4 +319,10 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 5px;
+}
+
+.greet-text {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px 0;
 }

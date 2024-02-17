@@ -100,3 +100,11 @@
         width: 150px !important;
     }
 }
+
+/////////////
+
+@media (min-width: 1400px) {
+    .main .block-container {
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)) !important;
+    }
+}
