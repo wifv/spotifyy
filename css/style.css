@@ -326,3 +326,7 @@
   font-weight: 600;
   margin: 20px 0;
 }
+
+body {
+  overflow-x: hidden;
+}
